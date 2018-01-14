@@ -61,9 +61,9 @@ data _+1≡_ : ∀ {n} → Fin n → Fin n → Set where
 
 infixr 6 _+1≟_
 _+1≟_ : ∀ {n} (i j : Fin n) → Dec (i +1≡ j)
-ace +1≟ ace = no λ ()
-ace +1≟ two = yes zero
-ace +1≟ suc (suc j) = no λ ()
+zero +1≟ zero = no λ ()
+zero +1≟ suc zero = yes zero
+suc zero +1≟ suc (suc j) = no λ ()
 suc i +1≟ ace = no λ ()
 suc i +1≟ suc j with i +1≟ j
 … | yes p = yes (suc p)
