@@ -82,7 +82,7 @@ play = menu (return _) (List.map act indices List.++ win ∷ quit ∷ [])
           (allPairs digits digits)
           (allPairs (allFin _) (allFin _)))
 
--- the Agda standard library doesn't have a randon number API
+-- the Agda standard library doesn't have a random number API
 -- so this is an artisinal hand-chosen initial deal
 initial = deal
   ( []
