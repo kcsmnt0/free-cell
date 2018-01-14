@@ -27,8 +27,8 @@ searchWith _ {{x}} = toWitness x
 infixr 6 _≟Color_
 _≟Color_ : (c c′ : Color) → Dec (c ≡ c′)
 red ≟Color red = yes refl
-red ≟Color black = no (λ ())
-black ≟Color red = no (λ ())
+red ≟Color black = no λ ()
+black ≟Color red = no λ ()
 black ≟Color black = yes refl
 
 infixr 6 _≟Suit_
