@@ -167,8 +167,7 @@ initial = deal
 
   ∷ [] )
 
-main = run do
-  input ← ♯ getContents
-  ♯ do
-    ♯ putStrLn (displayGame initial)
-    ♯ sequence′ (scan play input initial)
+main = run
+  (♯ getContents >>= λ input →
+   ♯ (♯ putStrLn (displayGame initial) >>
+      ♯ sequence′ (scan play input initial)))
